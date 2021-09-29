@@ -61,8 +61,7 @@ public class Mp3 {
     public void nextMusic() {
         music = music + 1;
     }
-
-    public void previousMusic() {
+    public void previousMusic(){
         music = music - 1;
     }
 }
