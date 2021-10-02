@@ -79,8 +79,6 @@ class Mp3Test {
         beatBox.previousMusic();
         beatBox.previousMusic();
         assertEquals(12, beatBox.getMusicCanBeChange());
-
-
     }
 
 }

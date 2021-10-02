@@ -1,18 +1,20 @@
-package personTraining;
+package CardVerrification;
 
 import java.util.Scanner;
 
 public class CreditCardVerification {
+    private static long cardNumber;
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter credit card number: ");
-        long cardNumber = input.nextLong();
+        cardNumber = input.nextLong();
         isValid(cardNumber);
+        sumOfDoubleEvenPlace(cardNumber);
 
     }
     //verifying credit card
-    public static boolean isValid(long cardNumber) {
+    public static void isValid(long cardNumber) {
         if (cardNumber <= ((999_999_999L * 10_000_000) + 9_999_999) && cardNumber >= 1_000_000_000L * 1_000_000) {
             System.out.println("Credit card is valid");
         }
@@ -28,13 +30,23 @@ public class CreditCardVerification {
         else {
             System.out.println("Credit card is not valid");
         }
-        return true;
     }
-//    public static int sumOfDoubleEvenPlace(long cardNumber){
-//
-//    }
+    public static int sumOfDoubleEvenPlace(long cardNumber){
+
+        int total = 0;
+        for (int i = 0; i < 16; i+=2) {
+            total += cardNumber;
+            System.out.println(total);
+        }
+        return total;
+        }
+
+
+
 
 }
+
+
 
 
 
